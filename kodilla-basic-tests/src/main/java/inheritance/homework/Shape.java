@@ -14,4 +14,4 @@ package inheritance.homework;
         public abstract void getCircuit();
 
     }
-}
+

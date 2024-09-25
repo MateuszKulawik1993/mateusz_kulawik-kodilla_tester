@@ -2,7 +2,6 @@ package inheritance.homework;
 
 public class Application {
 
-    public class Application {
 
         public static void main(String[] args) {
             Square square= new Square();
@@ -24,4 +23,3 @@ public class Application {
 
     }
 
-}

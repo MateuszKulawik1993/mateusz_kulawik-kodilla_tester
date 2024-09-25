@@ -10,7 +10,5 @@ public class Calculator {
         return a - b;
     }
 
-    public double Math.pow(double c,2){
-        return c^2;
-    }
+
 }
