@@ -20,7 +20,7 @@ public class CarRace {
 
         Car ford = new Ford();
         Car opel = new Opel();
-        Car toyota = new Kia();
+        Car kia = new Kia();
 
         System.out.println("Race for Ford:");
         doRace(ford);
@@ -29,7 +29,7 @@ public class CarRace {
         doRace(opel);
 
         System.out.println("Race for Toyota:");
-        doRace(toyota);
+        doRace(kia);
     }
 
 
