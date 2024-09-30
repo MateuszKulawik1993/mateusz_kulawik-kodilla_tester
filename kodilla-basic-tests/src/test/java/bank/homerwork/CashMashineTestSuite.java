@@ -8,13 +8,13 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 public class CashMashineTestSuite {
     @Test
     public void testCashMashineZerolength() {
-        CashMashine cashMashine = new CashMachine();
+        CashMachine cashMashine = new CashMachine();
         int[] values = cashMashine.getValues();
         assertEquals(0, values.length);
     }
     @Test
     public void testCashMashineZerolength2() {
-        CashMashine cashMashine = new CashMachine();
+        CashMachine cashMashine = new CashMachine();
         cashMashine.add(4);
         cashMashine.add(-3);
 

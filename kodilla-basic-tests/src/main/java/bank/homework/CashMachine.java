@@ -11,9 +11,9 @@ public class CashMachine {
     }
 
     public void add(int value){
-        This size;++
+        this.size++;
         int[] newTab = new int [this.size];
-        System.arraycopy(values 0, newTab,0, values.length);
+        System.arraycopy(values, 0, newTab,0, values.length);
         newTab[this.size - 1] = value;
         this.values = newTab;
     }
@@ -22,14 +22,27 @@ public class CashMachine {
         return values;
     }
 
-    public int getSaldo(){
-        return this.values[0];
+    public double getSaldo(){
+     double suma =0;
+      for(int i=0; i<this.values.length;i++){
+        suma += this.values[i];
+      }
+      return suma;
     }
 
-    public int getTotal(){
-        return this.values[this.size - 1];
+    public int getTransactionsCount(){
+        return this.values.length;
     }
 
-
+    public void deposit(int value){
+        if (value>0){
+            add(value);
+        }
+    }
+    public void payOut(int value){
+        if(value<0){
+            add(value);
+        }
+    }
 }
 

@@ -1,39 +1,72 @@
 package bank.homework;
 
-public class Bank {
 
-    private  String cashMashine;
-    private  int cashDeposits=15;
-    private int cashWithdrawals=25;
+    public class Bank {
+        private int size;
+        private CashMachine[] values;
 
-    String[] cashMashine=new String[]{"bankomat1","bankomat2","bankomat3", "bankomat4", "bankomat5"};
-
-    int numberOfelements=cashMashine.length();
-
-    public int sum(){
-        int suma=0;
-        for(int i=0;i<numberOfelements;i++){
-            suma = suma + cashMashine[i];
+        public Bank() {
+            this.size = 0;
+            this.values = new CashMachine[0];
         }
-    }
 
-    public int cashMashinesBilnas() {
-        return cashDeposits-cashWithdrawals;
-    }
+        public void addCashMachine(CashMachine cashMachine) {
+            CashMachine[] newValues = new CashMachine[this.size + 1];
+            System.arraycopy(values, 0, newValues, 0, values.length);
+            newValues[this.size] = cashMachine;
+            this.values = newValues;
+            this.size++;
 
-    public int amountOfwithdrawalTransaction(){
-        return cashWithdrawals;
-    }
-    public int amountOfdepositTransaction() {
-        return cashDeposits;
-    }
-    public double averageWithdrawalTransactions() {
-            return cashWithdrawals / cashMashine.length();
-    }
-    public double averageDepositTransactions(){
-        return cashDeposits/cashMashine.length();
-    }
 
+            public double getTotalBalance() {
+            double totalBalance = 0;
+            for (CashMachine) {
+                totalBalance += CashMachine.getBalance();
+            }
+            return totalBalance;
+        }
+
+        public int getTotalPayOutTransactions() {
+            int totalWithdrawals = 0;
+            for (CashMachine cashMachine : values) {
+                totalWithdrawals += CashMachine.TotalPayOutTransactions();
+            }
+            return totalPayOut;
+        }
+
+
+        public int getTotalDepositTransactions() {
+            int totalDeposits = 0;
+            for (CashMachine cashMachine : values) {
+                totalDeposits = CashMachine.getDepositTransactions();
+            }
+            return totalDeposits;
+        }
+
+        // Metoda zwracająca średnią wartość wypłaty
+        public double getAverageWithdrawal() {
+            double totalPayOut = 0;
+            int totalPayOuts = 0;
+            for (CashMachine cashMachine : values) {
+                totalWithdrawn = CashMachine.getTotalWithdrawn();
+                totalWithdrawals = CashMachine.getWithdrawalTransactions();
+            }
+            return  totalWithdrawn / totalWithdrawals;
+        }
+
+        // Metoda zwracająca średnią wartość wpłaty
+        public double getAverageDeposit() {
+            double totalDeposited = 0;
+            int totalDeposits = 0;
+            for (CashMachine cashMachine : values) {
+                totalDeposited += CashMachine.getTotalDeposited();
+                totalDeposits += CashMachine.getDepositTransactions();
+            }
+            return  totalDeposited / totalDeposits;
+        }
+
+
+    }
 
 }
 
