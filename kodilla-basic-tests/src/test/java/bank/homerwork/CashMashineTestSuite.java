@@ -3,6 +3,7 @@ package bank.homerwork;
 import bank.homework.CashMachine;
 import org.junit.jupiter.api.Test;
 
+import static org.junit.jupiter.api.Assertions.assertArrayEquals;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class CashMashineTestSuite {
@@ -25,6 +26,43 @@ public class CashMashineTestSuite {
         assertEquals(3, values[2]);
 
     }
+
+    @Test
+    public void testDepositPositiveValue() {
+        CashMachine cashMashine = new CashMachine();
+        cashMachine.deposit(100);
+        assertArrayEquals(new int[]{100}, cashMachine.getValues());
+        assertEquals(1, cashMachine.getTransactionsCount());
+
+        cashMachine.deposit(50);
+        assertArrayEquals(new int[]{100, 50}, cashMachine.getValues());
+    }
+
+    @Test
+    public void testDepositNegativeValue() {
+        CashMachine cashMashine = new CashMachine();
+        cashMachine.deposit(-100);
+        assertArrayEquals(new int[]{}, cashMachine.getValues());
+        assertEquals(0, cashMachine.getTransactionsCount());
+    }
+
+    @Test
+    public void testPayOutNegativeValue() {
+        CashMachine cashMashine = new CashMachine();
+        cashMachine.payOut(-100);
+        assertArrayEquals(new int[]{-100}, cashMachine.getValues());
+        assertEquals(1, cashMachine.getTransactionsCount());
+    }
+
+    @Test
+    public void testPayOutPositiveValue() {
+        CashMachine cashMashine = new CashMachine();
+        cashMachine.payOut(100);
+        assertArrayEquals(new int[]{}, cashMachine.getValues());
+        assertEquals(0, cashMachine.getTransactionsCount());
+    }
+
+
 
 }
 

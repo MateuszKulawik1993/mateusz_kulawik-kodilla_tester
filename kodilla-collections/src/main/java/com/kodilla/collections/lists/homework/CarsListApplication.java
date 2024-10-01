@@ -21,12 +21,14 @@ public class CarsListApplication {
             CarUtils.describeCar(car);
         }
         carList.remove(1);
-        System.out.println("\nAfter removing second car by index:");
+        System.out.println("After removing second car by index:");
 
         for (Car car : carList) {
             CarUtils.describeCar(car);
         }
 
+        carList.remove(2);
+        System.out.println("After removing third car by index:");
         carList.remove(ford);
         System.out.println("After removing Ford by object:");
 
