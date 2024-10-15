@@ -33,7 +33,7 @@ public class SchoolDirectory {
 
         for(Map.entry(Principal,School) entry : schoolDirectory.entrySet()){
             Principal principal entry.getKay();
-            School school   entry.getValue ();
+            School school entry.getValue();
             System.out.println("Dyrektor: " + principal.getName());
             System.out.println("Szkoła: " + school.getName());
             System.out.println("Łączna liczba uczniów: " + school.getTotalStudents());

@@ -25,11 +25,11 @@ public class School {
             return total;
         }
 
-    public String getName(){
-        return name;
+    public String getName() {
+        return null;
     }
 
 
-
-
+    public String getTotalStudents() {
+    }
 }
