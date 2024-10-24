@@ -42,6 +42,7 @@ class GamblingMachineTest {
     }
 
     private void howManyWins(Set<Integer> userNumbers) {
+
     }
 }
 
