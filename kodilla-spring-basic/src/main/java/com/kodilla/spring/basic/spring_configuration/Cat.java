@@ -1,4 +1,8 @@
 package com.kodilla.spring.basic.spring_configuration;
+public class Cat implements Animal {
 
-public class Cat {
+    @Override
+    public String getVoice() {
+        return "Meow meow";
+    }
 }

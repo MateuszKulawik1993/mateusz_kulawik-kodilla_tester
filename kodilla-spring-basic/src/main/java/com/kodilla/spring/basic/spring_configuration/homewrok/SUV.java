@@ -1,4 +1,17 @@
 package com.kodilla.spring.basic.spring_configuration.homewrok;
 
-public class SUV {
+import java.time.LocalTime;
+
+public class SUV implements Car {
+
+    @Override
+    public boolean hasHeadlightsTurnedOn() {
+        LocalTime currentTime = LocalTime.now();
+        return currentTime.isAfter(LocalTime.of(20, 0)) || currentTime.isBefore(LocalTime.of(6, 0));
+    }
+
+    @Override
+    public String getCarType() {
+        return "SUV";
+    }
 }
