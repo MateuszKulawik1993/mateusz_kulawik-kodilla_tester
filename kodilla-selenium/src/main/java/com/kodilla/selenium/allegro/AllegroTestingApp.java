@@ -24,10 +24,8 @@ public class AllegroTestingApp {
         WebElement searchField = driver.findElement(By.xpath("//input[@type='search']"));
         searchField.sendKeys("Mavic mini");
 
-
         WebElement searchButton = driver.findElement(By.xpath("//button[contains(@data-role,'search-button')]"));
         searchButton.click();
-
 
     }
 }
