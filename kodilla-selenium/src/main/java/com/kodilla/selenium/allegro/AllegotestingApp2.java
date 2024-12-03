@@ -32,10 +32,6 @@ public class AllegotestingApp2 {
         WebElement searchButton = driver.findElement(By.cssSelector("button[data-role='search-button']"));
         searchButton.click();
 
-        // Poczekaj na pierwszy wynik wyszukiwania
-        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-        wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("section > article")));
-
         // Znajdź wszystkie karty produktów
         List<WebElement> productCards = driver.findElements(By.cssSelector("section > article"));
 
