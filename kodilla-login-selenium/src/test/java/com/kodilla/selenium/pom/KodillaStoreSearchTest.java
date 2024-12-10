@@ -15,7 +15,7 @@ import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class KodillaStoreSearchTests {
+public class KodillaStoreSearchTest {
 
      WebDriver driver;
 
@@ -23,7 +23,6 @@ public class KodillaStoreSearchTests {
     public void setUp() {
         System.setProperty("webdriver.chrome.driver", "C:\\Selenium-drivers\\Chrome\\chromedriver-win64\\chromedriver.exe");
         driver = new ChromeDriver();
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
         driver.get("https://kodilla.com/pl/test/store");
     }
 
