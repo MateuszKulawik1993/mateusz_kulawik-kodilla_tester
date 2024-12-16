@@ -1,0 +1,66 @@
+plugins {
+    id 'java'
+}
+plugins {
+    id 'jacoco'
+}
+plugins {
+    id 'checkstyle'
+}
+
+plugins {
+    id "com.github.spotbugs" version "6.0.14"
+}
+group = 'com.kodilla'
+version = '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testImplementation platform('org.junit:junit-bom:5.10.0')
+    testImplementation 'org.junit.jupiter:junit-jupiter'
+}
+checkstyle {
+    toolVersion "8.30"
+    configFile = file("checkstyle.xml")
+}
+
+test {
+    useJUnitPlatform()
+}
+spotbugs {
+    ignoreFailures = true
+}
+jacocoTestCoverageVerification {
+    violationRules {
+        rule {
+            element = 'CLASS'
+            includes = ['com.kodilla.jacoco.*']
+
+            // Wymaganie 100% pokrycia BRANCH
+            limit {
+                counter = 'BRANCH'
+                value = 'COVEREDRATIO'
+                minimum = 1.0
+            }
+        }
+    }
+}
+
+spotbugsMain {
+    reports {
+        html {
+            required = true
+        }
+    }
+}
+
+spotbugsTest {
+    reports {
+        html {
+            required = true
+        }
+    }
+}
