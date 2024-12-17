@@ -13,15 +13,17 @@ public class StringValidatorTestSuite {
     private StringValidator validator = new StringValidator();
 
     @Test
-    public void shouldReturnFalseIfStringIsNotEmpty(){
+    public void shouldReturnFalseIfStringIsNotEmpty() {
         assertFalse(validator.isBlank("test"));
     }
+
     @Test
-    public void shouldReturnTrueIfStringIsEmpty(){
+    public void shouldReturnTrueIfStringIsEmpty() {
         assertTrue(validator.isBlank(""));
     }
+
     @Test
-    public void shuldReturnTrueIfStringHasOnlySpaces(){
+    public void shuldReturnTrueIfStringHasOnlySpaces() {
         assertTrue(validator.isBlank("   "));
     }
 
@@ -29,13 +31,16 @@ public class StringValidatorTestSuite {
     public void shouldReturnTrueIfStringIsNull() {
         assertTrue(validator.isBlank(null));
     }
+
     @ParameterizedTest
     @ValueSource(strings = {"", "   "})
     public void shouldReturnTrueIfStringIsEmpty(String text) {
         assertTrue(validator.isBlank(text));
     }
+
     @ParameterizedTest
     @NullSource
     public void shouldReturnTrueIfStringIsNull(String text) {
         assertTrue(validator.isBlank(text));
     }
+}

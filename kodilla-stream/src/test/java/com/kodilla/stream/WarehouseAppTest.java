@@ -1,4 +1,4 @@
-package stream;
+package com.kodilla.stream;
 
 import com.kodilla.exception.homework.Order;
 import com.kodilla.exception.homework.OrderDoesntExistException;

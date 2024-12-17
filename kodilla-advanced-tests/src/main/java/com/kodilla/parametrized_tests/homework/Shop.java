@@ -1,6 +1,5 @@
 package com.kodilla.parametrized_tests.homework;
 
-mport java.time.LocalDate;
 import java.time.LocalDate;
 import java.util.HashSet;
 import java.util.List;
@@ -8,7 +7,7 @@ import java.util.Set;
 import java.util.stream.Collectors;
 
 public class Shop {
-    private Set<Order> orders;
+    private final Set<Order> orders;
 
     public Shop() {
         orders = new HashSet<>();

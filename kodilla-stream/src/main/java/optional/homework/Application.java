@@ -21,3 +21,4 @@ public class Application {
             System.out.println("Uczeń: " + student.getName() + ", nauczyciel: " + teacherName);
         }
 }
+}

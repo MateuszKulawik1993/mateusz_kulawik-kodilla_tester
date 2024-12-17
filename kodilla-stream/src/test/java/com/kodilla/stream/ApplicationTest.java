@@ -1,4 +1,4 @@
-package stream;
+package com.kodilla.stream;
 
 import optional.homework.Student;
 import optional.homework.Teacher;

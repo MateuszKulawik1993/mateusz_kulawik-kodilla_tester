@@ -1,7 +1,6 @@
-
-mport org.junit.jupiter.params.ParameterizedTest;
-import inheritance.homework.Person;
+package com.kodilla.parametrized_tests.homework;
 import org.junit.jupiter.params.ParameterizedTest;
+import inheritance.homework.Person;
 import org.junit.jupiter.params.provider.CsvSource;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;

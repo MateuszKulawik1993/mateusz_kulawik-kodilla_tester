@@ -1,35 +1,35 @@
 package com.kodilla.collections.adv.maps.homework;
 
-import school.Student;
-
 import java.util.ArrayList;
+import java.util.List;
 
 public class School {
+    private final String name;
+    private final List<Integer> studentsPerClass;
 
-    private String name;
-    private ArrayList<Student> studentsPerClass;
-
-    public School(String name, ArrayList<Student> studentsPerClass) {
+    public School(String name, List<Integer> studentsPerClass) {
         this.name = name;
-        this.studentsPerClass = studentsPerClass;
+        this.studentsPerClass = new ArrayList<>(studentsPerClass);
     }
-    public void addClass(int numberofStudents) {
-        studentsPerClass.add(numberofStudents);
-    }
-
-    public int getNumberOfStudents() {
-        int total = 0;
-        for(Student student : studentsPerClass) {
-            total += student;
-        }
-            return total;
-        }
 
     public String getName() {
-        return null;
+        return name;
     }
 
+    public List<Integer> getStudentsPerClass() {
+        return new ArrayList<>(studentsPerClass);
+    }
 
-    public String getTotalStudents() {
+    public int getTotalStudents() {
+        int total = 0;
+        for (int students : studentsPerClass) {
+            total += students;
+        }
+        return total;
+    }
+
+    @Override
+    public String toString() {
+        return "Szkoła: " + name + ", Łączna liczba uczniów: " + getTotalStudents();
     }
 }

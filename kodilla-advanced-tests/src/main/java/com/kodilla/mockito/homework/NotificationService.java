@@ -1,5 +1,5 @@
 package com.kodilla.mockito.homework;
-package homework;
+
 
 import java.util.*;
 

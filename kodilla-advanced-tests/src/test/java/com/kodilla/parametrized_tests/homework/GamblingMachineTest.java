@@ -1,4 +1,5 @@
-import com.kodilla.parametrized_tests.homework.InvalidNumbersException;
+package com.kodilla.parametrized_tests.homework;
+
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvFileSource;
@@ -41,8 +42,9 @@ class GamblingMachineTest {
         assertThrows(InvalidNumbersException.class, () -> gamblingMachine.howManyWins(userNumbers));
     }
 
-    private void howManyWins(Set<Integer> userNumbers) {
+    private int howManyWins(Set<Integer> userNumbers) {
 
+        return 0;
     }
 }
 

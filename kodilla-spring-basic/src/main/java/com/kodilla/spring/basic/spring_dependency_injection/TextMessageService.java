@@ -9,3 +9,4 @@ public class TextMessageService implements MessageService {
     public String send(String message, String receiver) {
         return "Sending text [" + message + "] to: " + receiver;
     }
+}

@@ -6,7 +6,7 @@ public class SimpleApplication {
     public SimpleApplication(MessageService messageService) {
         this.messageService = messageService;
     }
-    private MessageService messageService = new MessageService();
+
 
     public void processMessage(String message, String receiver) {
         if (checkReceiver(receiver)) {

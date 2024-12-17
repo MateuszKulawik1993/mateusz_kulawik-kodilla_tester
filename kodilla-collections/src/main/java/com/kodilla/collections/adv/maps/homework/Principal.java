@@ -2,7 +2,7 @@ package com.kodilla.collections.adv.maps.homework;
 
 public class Principal {
 
-    private String name;
+    private final String name;
 
     public Principal(String name) {
         this.name = name;
@@ -12,7 +12,8 @@ public class Principal {
         return name;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    @Override
+    public String toString() {
+        return "Dyrektor: " + name;
     }
 }
